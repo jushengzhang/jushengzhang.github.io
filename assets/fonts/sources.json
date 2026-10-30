@@ -1,0 +1,32 @@
+[
+  {
+    "family": "Inter",
+    "weight": 600,
+    "file": "inter-600.ttf",
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuGKYMZg.ttf"
+  },
+  {
+    "family": "Libre Baskerville",
+    "weight": 700,
+    "file": "libre-baskerville-700.ttf",
+    "url": "https://fonts.gstatic.com/s/librebaskerville/v24/kmKUZrc3Hgbbcjq75U4uslyuy4kn0olVQ-LglH6T17ujFgkSCQ.ttf"
+  },
+  {
+    "family": "Source Sans 3",
+    "weight": 400,
+    "file": "source-sans-3-400.ttf",
+    "url": "https://fonts.gstatic.com/s/sourcesans3/v20/nwpBtKy2OAdR1K-IwhWudF-R9QMylBJAV3Bo8Ky461EN.ttf"
+  },
+  {
+    "family": "Source Sans 3",
+    "weight": 600,
+    "file": "source-sans-3-600.ttf",
+    "url": "https://fonts.gstatic.com/s/sourcesans3/v20/nwpBtKy2OAdR1K-IwhWudF-R9QMylBJAV3Bo8Kxm7FEN.ttf"
+  },
+  {
+    "family": "Source Sans 3",
+    "weight": 700,
+    "file": "source-sans-3-700.ttf",
+    "url": "https://fonts.gstatic.com/s/sourcesans3/v20/nwpBtKy2OAdR1K-IwhWudF-R9QMylBJAV3Bo8Kxf7FEN.ttf"
+  }
+]

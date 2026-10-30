@@ -1,0 +1,1 @@
+Fonts are bundled for offline viewing. Source URLs are recorded in sources.json. Each family is licensed under the SIL Open Font License; corresponding OFL files are included. Font files are distributed unmodified.

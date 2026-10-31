@@ -85,12 +85,12 @@ h4 { font-family: var(--ui-font); font-size: 12px; font-weight: 600; letter-spac
 .research-links a { display: inline-block; white-space: nowrap; margin-right: 4px; }
 ul.news { list-style: none; padding: 0; margin: 0; font-size: 18px; line-height: 1.65; }
 ul.news li { display: grid; grid-template-columns: 32px minmax(0, 1fr); align-items: start; gap: 18px; margin: 0 0 3px; }
-.news-badge { display: inline-block; width: 32px; margin-top: 7px; background: #c74b38; color: #fff; font: italic 700 10px/15px Georgia, serif; text-align: center; transform: rotate(-14deg); clip-path: polygon(0 20%, 17% 15%, 10% 0, 72% 4%, 100% 0, 88% 40%, 100% 55%, 80% 82%, 25% 100%, 26% 83%, 0 90%, 10% 57%); }
-.news-copy { color: #354f9e; font-weight: 600; }
+.news-badge { display: inline-block; width: 32px; margin-top: 7px; background: #f3293c; color: #fff; font: italic 700 10px/15px Georgia, serif; text-align: center; transform: rotate(-14deg); clip-path: polygon(0 20%, 17% 15%, 10% 0, 72% 4%, 100% 0, 88% 40%, 100% 55%, 80% 82%, 25% 100%, 26% 83%, 0 90%, 10% 57%); }
+.news-copy { width: fit-content; max-width: 100%; color: #354f9e; font-weight: 600; }
 .news-copy b { font-weight: 700; }
 .news-date { white-space: nowrap; }
 @supports (background-clip: text) or (-webkit-background-clip: text) {
-  .news-copy { background-image: linear-gradient(100deg, #c44932 0%, #9b3f86 46%, #3b65bd 100%); background-clip: text; -webkit-background-clip: text; color: transparent; -webkit-text-fill-color: transparent; }
+  .news-copy { background-image: linear-gradient(90deg, #ff0000 0%, #2575fc 100%); background-clip: text; -webkit-background-clip: text; color: transparent; -webkit-text-fill-color: transparent; }
 }
 .btn { border: 0; background: transparent; color: var(--link); padding: 0; margin-top: 8px; cursor: pointer; font-size: 16px; }
 .btn:hover { text-decoration: underline; }

@@ -10,20 +10,14 @@
 @font-face{font-family:"Source Sans 3";font-style:normal;font-weight:400;font-display:swap;src:url("assets/fonts/source-sans-3-400.ttf") format("truetype");}
 @font-face{font-family:"Source Sans 3";font-style:normal;font-weight:600;font-display:swap;src:url("assets/fonts/source-sans-3-600.ttf") format("truetype");}
 @font-face{font-family:"Source Sans 3";font-style:normal;font-weight:700;font-display:swap;src:url("assets/fonts/source-sans-3-700.ttf") format("truetype");}:root {
-  --fg: #2d333a;
-  --heading: #253b50;
-  --link: #176896;
-  --navy: #28577a;
-  --accent: #267b89;
-  --soft: #edf5f7;
-  --news-start: #6542a6;
-  --news-middle: #176fc1;
-  --news-end: #087a87;
-  --muted: #667581;
-  --line: #e0e9ee;
+  --fg: #25282d;
+  --link: #35649a;
+  --navy: #2b568b;
+  --muted: #68717c;
+  --line: #e3e6e8;
   --paper-figure-width: 350px;
   --section-inset: 28px;
-  --portrait-width: 220px;
+  --portrait-width: 200px;
   --award: #c33136;
   --body-font: "Source Sans 3", "Segoe UI", Arial, sans-serif;
   --display-font: "Libre Baskerville", Georgia, "Times New Roman", serif;
@@ -35,22 +29,21 @@
 html { scroll-behavior: smooth; scroll-padding-top: 96px; }
 body { margin: 0; background: #fff; color: var(--fg); font-family: var(--body-font); font-size: 18px; line-height: 1.62; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
 a { color: var(--link); text-decoration: none; text-underline-offset: 3px; }
-a:hover { color: #0b576e; text-decoration: underline; }
+a:hover { color: #834b40; text-decoration: underline; }
 b, strong { font-weight: 600; }
 :focus-visible { outline: 2px solid var(--link); outline-offset: 4px; }
 button, input { font: inherit; }
 button { touch-action: manipulation; }
 .wrap { width: 100%; max-width: 1600px; margin: 0 auto; padding: 0 42px; }
-nav.top { position: sticky; top: 0; z-index: 5; display: flex; align-items: center; flex-wrap: wrap; gap: 12px 30px; padding: 25px 0 20px; border-bottom: 1px solid var(--line); background: #fff; font-family: var(--ui-font); font-size: 13px; font-weight: 600; letter-spacing: .015em; }
+nav.top { position: sticky; top: 0; z-index: 5; display: flex; align-items: center; flex-wrap: wrap; gap: 12px 30px; padding: 28px 0 22px; background: #fff; font-family: var(--ui-font); font-size: 13px; font-weight: 600; letter-spacing: .065em; text-transform: uppercase; }
 nav.top a { color: var(--link); white-space: nowrap; }
-nav.top a[aria-current="location"] { color: var(--navy); text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 7px; }
-.hero { display: grid; grid-template-columns: minmax(0, 1fr) var(--portrait-width); grid-template-areas: "title title" "bio portrait"; gap: 28px 36px; align-items: start; padding: 29px 0 6px; }
-.hero-copy { grid-area: bio; min-width: 0; }
-.hero h1 { grid-area: title; font-family: var(--display-font); font-size: 38px; font-weight: 700; line-height: 1.3; letter-spacing: -.85px; color: var(--heading); margin: 0; }
+nav.top a[aria-current="location"] { color: #1d334c; text-decoration: underline; }
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) var(--portrait-width); gap: 28px 36px; align-items: start; padding: 29px 0 6px; }
+.hero-copy { min-width: 0; }
+.hero h1 { grid-column: 1 / -1; font-family: var(--display-font); font-size: 38px; font-weight: 700; line-height: 1.3; letter-spacing: -1.2px; color: #20242a; margin: 0; }
 .hero p { margin: 0 0 17px; }
 .hero-copy > p { font-size: 18px; line-height: 1.65; }
-.hero-copy .hero-goal { color: var(--heading); margin: 0 0 20px; }
-.profile-side { grid-area: portrait; width: var(--portrait-width); padding: 4px 0 0; }
+.profile-side { padding: 5px 0 0; }
 .photo, .portrait-space { width: var(--portrait-width); overflow: hidden; }
 .portrait-space { aspect-ratio: 3 / 4; }
 .photo img { display: block; width: 100%; height: auto; }
@@ -60,7 +53,7 @@ nav.top a[aria-current="location"] { color: var(--navy); text-decoration: underl
 .current-affiliation a { display: block; font-size: 17px; line-height: 1.35; font-weight: 600; }
 .current-affiliation span { display: block; font-size: 14px; line-height: 1.5; color: var(--muted); margin-top: 4px; }
 .social { display: flex; align-items: center; gap: 19px; margin: 19px 0 5px; }
-.social a { display: inline-flex; width: 29px; height: 32px; align-items: center; justify-content: center; color: var(--navy); }
+.social a { display: inline-flex; width: 29px; height: 32px; align-items: center; justify-content: center; color: #292e35; }
 .social svg { display: block; width: 27px; height: 27px; fill: currentColor; }
 .social .social-stanford-mark { display: block; width: 22px; height: 30px; object-fit: contain; }
 .social a:hover { color: var(--link); }
@@ -76,8 +69,8 @@ nav.top a[aria-current="location"] { color: var(--navy); text-decoration: underl
 section { padding: 36px 0 4px; scroll-margin-top: 90px; }
 #news { padding-top: 28px; }
 .section-body { margin-inline: var(--section-inset); }
-h2.sec { font-family: var(--display-font); font-size: 29px; font-weight: 700; letter-spacing: -.6px; line-height: 1.4; color: var(--heading); margin: 0 0 12px; }
-h2.sec + hr { height: 2px; border: 0; background: linear-gradient(to right, var(--accent) 0 42px, var(--line) 42px 100%); margin: 0 0 23px; }
+h2.sec { font-family: var(--display-font); font-size: 30px; font-weight: 700; letter-spacing: -.7px; line-height: 1.4; color: #20242a; margin: 0 0 14px; }
+h2.sec + hr { border: 0; border-top: 1px solid var(--line); margin: 0 0 23px; }
 h3.subsec { font-size: 23px; font-weight: 600; margin: 26px 0 9px; line-height: 1.4; }
 h3.subsec:first-of-type { margin-top: 0; }
 h4 { font-family: var(--ui-font); font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: #68717c; margin: 25px 0 4px; }
@@ -86,23 +79,24 @@ h4 { font-family: var(--ui-font); font-size: 12px; font-weight: 600; letter-spac
 .research-areas { padding-left: 23px; margin: 0; font-size: 18px; line-height: 1.7; }
 .research-areas li { padding-left: 2px; margin-bottom: 10px; }
 .research-areas li:last-child { margin-bottom: 0; }
-.research-areas strong a { color: var(--heading); }
+.research-areas strong a { color: #252d37; }
 .research-areas strong a:hover { color: var(--link); }
 .research-links { font-size: 17px; }
 .research-links a { display: inline-block; white-space: nowrap; margin-right: 4px; }
 ul.news { list-style: none; padding: 0; margin: 0; font-size: 18px; line-height: 1.65; }
-ul.news li { display: grid; grid-template-columns: 86px minmax(0, 1fr); align-items: baseline; gap: 17px; margin: 0 0 9px; }
-.news-copy { width: fit-content; max-width: 100%; color: #3558a7; font-weight: 600; }
-.news-copy b { color: inherit; font-weight: 700; }
-.news-date { justify-self: start; padding: 3px 6px; border-radius: 4px; background: #f3f0fa; color: #644b99; font-family: var(--ui-font); font-size: 12px; font-weight: 600; font-variant-numeric: tabular-nums; line-height: 1.5; white-space: nowrap; }
+ul.news li { display: grid; grid-template-columns: 32px minmax(0, 1fr); align-items: start; gap: 18px; margin: 0 0 3px; }
+.news-badge { display: inline-block; width: 32px; margin-top: 7px; background: #c74b38; color: #fff; font: italic 700 10px/15px Georgia, serif; text-align: center; transform: rotate(-14deg); clip-path: polygon(0 20%, 17% 15%, 10% 0, 72% 4%, 100% 0, 88% 40%, 100% 55%, 80% 82%, 25% 100%, 26% 83%, 0 90%, 10% 57%); }
+.news-copy { color: #354f9e; font-weight: 600; }
+.news-copy b { font-weight: 700; }
+.news-date { white-space: nowrap; }
 @supports (background-clip: text) or (-webkit-background-clip: text) {
-  .news-copy { background-image: linear-gradient(105deg, var(--news-start) 0%, var(--news-middle) 48%, var(--news-end) 100%); background-clip: text; -webkit-background-clip: text; color: transparent; -webkit-text-fill-color: transparent; }
+  .news-copy { background-image: linear-gradient(100deg, #c44932 0%, #9b3f86 46%, #3b65bd 100%); background-clip: text; -webkit-background-clip: text; color: transparent; -webkit-text-fill-color: transparent; }
 }
 .btn { border: 0; background: transparent; color: var(--link); padding: 0; margin-top: 8px; cursor: pointer; font-size: 16px; }
 .btn:hover { text-decoration: underline; }
 .filters { display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0 17px; }
-.chip { border: 1px solid transparent; border-radius: 5px; padding: 6px 12px; background: transparent; color: var(--link); font-family: var(--ui-font); font-size: 13px; font-weight: 600; line-height: 1.6; cursor: pointer; transition: background-color .15s, color .15s; }
-.chip:hover { background: var(--soft); }
+.chip { border: 1px solid transparent; border-radius: 4px; padding: 6px 12px; background: #fff; color: var(--link); font-family: var(--ui-font); font-size: 13px; font-weight: 600; line-height: 1.6; cursor: pointer; transition: background-color .15s, color .15s; }
+.chip:hover { background: #f1f5f9; }
 .chip[aria-pressed="true"] { color: #fff; background: var(--navy); border-color: var(--navy); }
 .publication-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 23px 0 4px; padding-bottom: 11px; border-bottom: 1px solid var(--line); }
 .publication-toolbar .filters { margin: 0; }
@@ -117,8 +111,8 @@ ul.pubs { list-style: none; padding: 0; margin: 0; }
 .figure-open { display: block; width: 100%; padding: 0; border: 1px solid transparent; border-radius: 0; line-height: 0; background: #fff; cursor: zoom-in; overflow: hidden; }
 .figure-open:hover { border-color: #8199b3; }
 .figure-open img { display: block; width: 100%; height: auto; object-fit: contain; }
-.pub .title { position: relative; color: var(--heading); font-family: var(--display-font); font-size: 18px; line-height: 1.5; font-weight: 700; letter-spacing: -.25px; margin: 0 0 6px; }
-.pub .title a { color: var(--heading); }
+.pub .title { position: relative; color: #20242a; font-family: var(--display-font); font-size: 18px; line-height: 1.5; font-weight: 700; letter-spacing: -.25px; margin: 0 0 6px; }
+.pub .title a { color: #20242a; }
 .pub .title a:hover { color: var(--link); }
 .pub .authors { color: var(--muted); font-size: 17px; line-height: 1.55; margin: 0 0 4px; }
 .pub .authors b { color: var(--fg); font-weight: 700; }
@@ -158,7 +152,7 @@ ul.pubs { list-style: none; padding: 0; margin: 0; }
 .challenge-cover:hover { border-color: #8199b3; }
 .challenge-cover img { display: block; width: 100%; height: 100%; object-fit: contain; }
 .challenge-title { font-family: var(--display-font); font-size: 18px; line-height: 1.5; font-weight: 700; margin: 0 0 7px; }
-.challenge-title a { color: var(--heading); }
+.challenge-title a { color: #20242a; }
 .challenge-title a:hover { color: var(--link); }
 .challenge-role { font-size: 18px; line-height: 1.55; margin: 0 0 5px; }
 .challenge-role b { font-weight: 700; }
@@ -197,19 +191,21 @@ ul.plain li { margin-bottom: 7px; }
 .education-entry .education-meta { font-size: 16px; color: var(--muted); margin-top: 4px; }
 #contact h2.sec { display: inline-block; color: var(--link); }
 @supports (background-clip: text) or (-webkit-background-clip: text) {
-  #contact h2.sec { background-image: linear-gradient(105deg, var(--news-start), var(--news-middle) 48%, var(--news-end)); background-clip: text; -webkit-background-clip: text; color: transparent; -webkit-text-fill-color: transparent; }
+  #contact h2.sec { background-image: linear-gradient(100deg, #c44932 0%, #9b3f86 46%, #3b65bd 100%); background-clip: text; -webkit-background-clip: text; color: transparent; -webkit-text-fill-color: transparent; }
 }
 .contact-address { font-style: normal; margin: 0 0 17px; line-height: 1.7; }
-.contact-institution { color: var(--heading); font-weight: 600; }
-.contact-location { color: var(--accent); }
-.contact-email { color: var(--link); }
+.contact-institution { color: #8c1515; font-weight: 600; }
+.contact-location { color: #27767d; }
+.contact-email { color: #345f93; }
 .contact-links { display: flex; flex-wrap: wrap; gap: 12px 24px; margin: 0; font-size: 18px; }
 .contact-social { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; }
 .contact-social svg { width: 23px; height: 23px; fill: currentColor; flex: 0 0 23px; }
 .contact-social .social-stanford-mark { display: block; width: 18px; height: 26px; object-fit: contain; flex: 0 0 18px; }
-.contact-social-scholar, .contact-social-github, .contact-social-linkedin { color: var(--link); }
+.contact-social-scholar { color: #3275bd; }
+.contact-social-github { color: #7954a1; }
+.contact-social-linkedin { color: #0a66c2; }
 .contact-social-stanford { color: #8c1515; }
-.contact-social:hover { color: #0b576e; }
+.contact-social:hover { color: #834b40; }
 footer { display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line); margin-top: 44px; padding: 22px 0 30px; color: var(--muted); font-size: 14px; }
 .skip-link { position: fixed; left: 15px; top: -80px; z-index: 100; background: #fff; padding: 8px 16px; border: 2px solid var(--link); }
 .skip-link:focus { top: 10px; }
@@ -228,8 +224,8 @@ footer { display: flex; justify-content: space-between; gap: 12px; border-top: 1
   :root { --paper-figure-width: 270px; --section-inset: 16px; --portrait-width: 180px; }
   .wrap { padding: 0 30px; }
   nav.top { gap: 10px 23px; font-size: 12px; }
-  .hero { grid-template-columns: minmax(0, 1fr) var(--portrait-width); gap: 24px 28px; }
-  .hero h1 { font-size: 34px; }
+  .hero { grid-template-columns: minmax(0, 1fr) var(--portrait-width); gap: 28px; }
+  .hero h1 { font-size: 37px; }
   .hero-copy > p { font-size: 18px; }
   .current-affiliation { gap: 10px; }
   .current-affiliation a { font-size: 16px; }
@@ -247,11 +243,11 @@ footer { display: flex; justify-content: space-between; gap: 12px; border-top: 1
   :root { --section-inset: 0px; }
   body { font-size: 18px; }
   .wrap { padding: 0 23px; }
-  nav.top { padding: 19px 0 15px; gap: 11px 19px; font-size: 11px; letter-spacing: .015em; }
-  .hero { grid-template-columns: 1fr; grid-template-areas: "title" "portrait" "bio"; gap: 22px; padding: 30px 0 10px; }
-  .hero h1 { font-size: clamp(29px, 8.2vw, 36px); letter-spacing: -.7px; margin: 0; text-align: center; }
+  nav.top { padding: 19px 0 15px; gap: 11px 19px; font-size: 11px; letter-spacing: .055em; }
+  .hero { grid-template-columns: 1fr; gap: 22px; padding: 30px 0 10px; }
+  .hero h1 { font-size: clamp(29px, 8.2vw, 37px); letter-spacing: -.9px; margin: 0; }
   .hero-copy > p { font-size: 18px; line-height: 1.65; }
-  .profile-side { width: 158px; padding: 0; }
+  .profile-side { padding: 0; }
   .profile-side.awaiting-photo { display: none; }
   .profile-side:not(.awaiting-photo) { grid-row: 2; justify-self: center; }
   .current-affiliations { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
@@ -272,8 +268,8 @@ footer { display: flex; justify-content: space-between; gap: 12px; border-top: 1
   .research-links { font-size: 16px; }
   ul.news { font-size: 17px; }
   ul.news { padding-left: 0; }
-  ul.news li { grid-template-columns: 75px minmax(0, 1fr); gap: 10px; margin-bottom: 12px; }
-  .news-date { font-size: 12px; }
+  ul.news li { grid-template-columns: 26px minmax(0, 1fr); gap: 10px; margin-bottom: 11px; }
+  .news-badge { width: 26px; font-size: 9px; }
   .publication-toolbar { gap: 6px; margin: 21px 0 5px; }
   .filters, .publication-toolbar .filters { gap: 8px; }
   .chip { font-size: 11px; padding: 7px 12px; }
@@ -328,7 +324,7 @@ footer { display: flex; justify-content: space-between; gap: 12px; border-top: 1
 </nav>
 
 <header class="hero" id="top">
-  <h1>Jusheng Zhang</h1>
+  <h1>Hi, I'm Jusheng Zhang!</h1>
   <div class="hero-copy">
     <p>I am a Visiting Researcher at <a href="https://www.stanford.edu/">Stanford University</a>, working with <a href="https://profiles.stanford.edu/joseph-wu">Joseph C. Wu</a> and <a href="https://profiles.stanford.edu/xuekun-wu">Xuekun Wu</a> on <b>agentic AI for life sciences</b>, and a student researcher at <a href="https://deepmind.google/">Google DeepMind</a>, working with <a href="https://scholar.google.com/citations?user=p9-ohHsAAAAJ">Ming-Hsuan Yang</a> and <a href="https://scholar.google.com/citations?user=1H9CkZgAAAAJ">Liangzhe Yuan</a> on <b>efficient video and vision-language models</b>. Previously, I was a research intern at <a href="https://www.ntu.edu.sg/">Nanyang Technological University</a> (with <a href="https://scholar.google.com/citations?user=NDMIYKsAAAAJ">Kwok-Yan Lam</a> and <a href="https://scholar.google.com/citations?user=JDN-eaYAAAAJ">Yongsen Zheng</a>), <a href="https://ai.meta.com/">Meta AI</a> (<a href="https://ai.meta.com/blog/llama-4-multimodal-intelligence/">Llama 4</a> team), and <a href="https://research.snap.com/">Snap Research</a> (with <a href="https://jianwang-cmu.github.io/">Jian Wang</a>), and a researcher at the HCP Lab of <a href="https://www.sysu.edu.cn/">Sun Yat-sen University</a> (with <a href="https://scholar.google.com/citations?user=Qirk2fYAAAAJ">Keze Wang</a> and <a href="https://scholar.google.com/citations?user=Nav8m8gAAAAJ">Liang Lin</a>).</p>
     <p class="hero-goal">My goal is to help build the next generation of <b>AI agents for scientific discovery</b>.</p>
@@ -351,22 +347,22 @@ footer { display: flex; justify-content: space-between; gap: 12px; border-top: 1
   <h2 class="sec">News and Highlights</h2><hr>
 <div class="section-body">
   <ul class="news">
-<li><span class="news-date">2026/09</span><span class="news-copy">Two papers accepted to <b>NeurIPS 2026</b>: <i>Self-Rewarded Reasoning</i> (<b>Spotlight</b>) and <i>E0</i>.</span></li>
-<li><span class="news-date">2026/09</span><span class="news-copy">Our work at <b>ECCV 2026</b>: <i>FlashVLM</i> (main conference <b>Poster</b>) and <i>ActPhysCause</i> (LoViF Workshop <b>Oral</b>).</span></li>
-<li><span class="news-date">2026/06</span><span class="news-copy">Joined <b>Stanford University</b> as a <b>Visiting Researcher</b> (terminal-degree requirement waived by the <abbr title="Dean’s Office of Academic Affairs">Dean’s Office</abbr>).</span></li>
-<li><span class="news-date">2026/06</span><span class="news-copy">Hosted the <b>1st LoViF Challenge</b> on Efficient VLMs at <b>CVPR 2026</b>; challenge report presented as <b>Workshop Oral</b>.</span></li>
-<li><span class="news-date">2026/05</span><span class="news-copy">Three papers accepted to <b>ICML 2026</b>: <i>Failure-Driven Workflow Refinement</i> (<b>Spotlight</b>), <i>SOLAR for Offline MARL</i>, and <i>Great Minds Think Alike</i>.</span></li>
-<li><span class="news-date">2026/03</span><span class="news-copy">Joined <b>Google DeepMind</b> as a student researcher, working with Ming-Hsuan Yang and Liangzhe Yuan.</span></li>
-<li><span class="news-date">2026/02</span><span class="news-copy">Five papers accepted to <b>CVPR 2026</b>, including two <b>Highlights</b>: <i>HybridToken-VLM</i> and <i>Vocabulary Scaling Law</i>.</span></li>
-<li><span class="news-date">2026/01</span><span class="news-copy">Two papers accepted to <b>ICLR 2026</b>: <i>Trading Visual Uncertainties</i> and <i>CoMem</i>.</span></li>
-<li class="more" hidden><span class="news-date">2026</span><span class="news-copy">Awarded the <b>Snap Global AI Future Leader Scholarship</b> ($30,000).</span></li>
-<li class="more" hidden><span class="news-date">2025/12</span><span class="news-copy">Started a research internship at <b>Nanyang Technological University</b> with Kwok-Yan Lam and Yongsen Zheng.</span></li>
-<li class="more" hidden><span class="news-date">2025/11</span><span class="news-copy">Three papers accepted to <b>AAAI 2026</b>, including <i>RaCoT</i> (<b>Oral</b>).</span></li>
-<li class="more" hidden><span class="news-date">2025/09</span><span class="news-copy">Four papers accepted to <b>NeurIPS 2025</b>: <i>GAM-Agent</i>, <i>MAT-Agent</i>, <i>Tri-MARF</i>, and <i>CF-VLM</i>.</span></li>
-<li class="more" hidden><span class="news-date">2025/08</span><span class="news-copy">Two papers accepted to <b>EMNLP 2025</b>, including <i>DrDiff</i> (<b>Oral</b>).</span></li>
-<li class="more" hidden><span class="news-date">2025</span><span class="news-copy">Selected for the <b>Snap Research Fellowship</b> (top 10 globally, $30,000).</span></li>
-<li class="more" hidden><span class="news-date">2025/05</span><span class="news-copy"><i>KABB</i> accepted to <b>ICML 2025</b>.</span></li>
-<li class="more" hidden><span class="news-date">2025/03</span><span class="news-copy">Joined <b>Meta AI</b> as a research intern, contributing to the Llama 4 project.</span></li>
+<li><span class="news-badge" aria-hidden="true">NEW</span><span class="news-copy"><span class="news-date">[2026/09]</span> Two papers accepted to <b>NeurIPS 2026</b>: <i>Self-Rewarded Reasoning</i> (<b>Spotlight</b>) and <i>E0</i>.</span></li>
+<li><span class="news-badge" aria-hidden="true">NEW</span><span class="news-copy"><span class="news-date">[2026/09]</span> Our work at <b>ECCV 2026</b>: <i>FlashVLM</i> (main conference <b>Poster</b>) and <i>ActPhysCause</i> (LoViF Workshop <b>Oral</b>).</span></li>
+<li><span class="news-badge" aria-hidden="true">NEW</span><span class="news-copy"><span class="news-date">[2026/06]</span> Joined <b>Stanford University</b> as a <b>Visiting Researcher</b> (terminal-degree requirement waived by the <abbr title="Dean’s Office of Academic Affairs">Dean’s Office</abbr>).</span></li>
+<li><span class="news-badge" aria-hidden="true">NEW</span><span class="news-copy"><span class="news-date">[2026/06]</span> Hosted the <b>1st LoViF Challenge</b> on Efficient VLMs at <b>CVPR 2026</b>; challenge report presented as <b>Workshop Oral</b>.</span></li>
+<li><span class="news-badge" aria-hidden="true">NEW</span><span class="news-copy"><span class="news-date">[2026/05]</span> Three papers accepted to <b>ICML 2026</b>: <i>Failure-Driven Workflow Refinement</i> (<b>Spotlight</b>), <i>SOLAR for Offline MARL</i>, and <i>Great Minds Think Alike</i>.</span></li>
+<li><span class="news-badge" aria-hidden="true">NEW</span><span class="news-copy"><span class="news-date">[2026/03]</span> Joined <b>Google DeepMind</b> as a student researcher, working with Ming-Hsuan Yang and Liangzhe Yuan.</span></li>
+<li><span class="news-badge" aria-hidden="true">NEW</span><span class="news-copy"><span class="news-date">[2026/02]</span> Five papers accepted to <b>CVPR 2026</b>, including two <b>Highlights</b>: <i>HybridToken-VLM</i> and <i>Vocabulary Scaling Law</i>.</span></li>
+<li><span class="news-badge" aria-hidden="true">NEW</span><span class="news-copy"><span class="news-date">[2026/01]</span> Two papers accepted to <b>ICLR 2026</b>: <i>Trading Visual Uncertainties</i> and <i>CoMem</i>.</span></li>
+<li class="more" hidden><span class="news-badge" aria-hidden="true">NEW</span><span class="news-copy"><span class="news-date">[2026]</span> Awarded the <b>Snap Global AI Future Leader Scholarship</b> ($30,000).</span></li>
+<li class="more" hidden><span class="news-badge" aria-hidden="true">NEW</span><span class="news-copy"><span class="news-date">[2025/12]</span> Started a research internship at <b>Nanyang Technological University</b> with Kwok-Yan Lam and Yongsen Zheng.</span></li>
+<li class="more" hidden><span class="news-badge" aria-hidden="true">NEW</span><span class="news-copy"><span class="news-date">[2025/11]</span> Three papers accepted to <b>AAAI 2026</b>, including <i>RaCoT</i> (<b>Oral</b>).</span></li>
+<li class="more" hidden><span class="news-badge" aria-hidden="true">NEW</span><span class="news-copy"><span class="news-date">[2025/09]</span> Four papers accepted to <b>NeurIPS 2025</b>: <i>GAM-Agent</i>, <i>MAT-Agent</i>, <i>Tri-MARF</i>, and <i>CF-VLM</i>.</span></li>
+<li class="more" hidden><span class="news-badge" aria-hidden="true">NEW</span><span class="news-copy"><span class="news-date">[2025/08]</span> Two papers accepted to <b>EMNLP 2025</b>, including <i>DrDiff</i> (<b>Oral</b>).</span></li>
+<li class="more" hidden><span class="news-badge" aria-hidden="true">NEW</span><span class="news-copy"><span class="news-date">[2025]</span> Selected for the <b>Snap Research Fellowship</b> (top 10 globally, $30,000).</span></li>
+<li class="more" hidden><span class="news-badge" aria-hidden="true">NEW</span><span class="news-copy"><span class="news-date">[2025/05]</span> <i>KABB</i> accepted to <b>ICML 2025</b>.</span></li>
+<li class="more" hidden><span class="news-badge" aria-hidden="true">NEW</span><span class="news-copy"><span class="news-date">[2025/03]</span> Joined <b>Meta AI</b> as a research intern, contributing to the Llama 4 project.</span></li>
   </ul>
   <button class="btn" id="news-toggle" type="button" aria-expanded="false">Show more news</button>
 </div>

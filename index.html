@@ -10,17 +10,17 @@
 @font-face{font-family:"Source Sans 3";font-style:normal;font-weight:400;font-display:swap;src:url("assets/fonts/source-sans-3-400.ttf") format("truetype");}
 @font-face{font-family:"Source Sans 3";font-style:normal;font-weight:600;font-display:swap;src:url("assets/fonts/source-sans-3-600.ttf") format("truetype");}
 @font-face{font-family:"Source Sans 3";font-style:normal;font-weight:700;font-display:swap;src:url("assets/fonts/source-sans-3-700.ttf") format("truetype");}:root {
-  --fg: #2e3d49;
-  --heading: #17364c;
+  --fg: #2d333a;
+  --heading: #253b50;
   --link: #176896;
-  --navy: #163e5b;
+  --navy: #28577a;
   --accent: #267b89;
   --soft: #edf5f7;
   --muted: #667581;
   --line: #e0e9ee;
   --paper-figure-width: 350px;
   --section-inset: 28px;
-  --portrait-width: 200px;
+  --portrait-width: 220px;
   --award: #c33136;
   --body-font: "Source Sans 3", "Segoe UI", Arial, sans-serif;
   --display-font: "Libre Baskerville", Georgia, "Times New Roman", serif;
@@ -41,13 +41,13 @@ button { touch-action: manipulation; }
 nav.top { position: sticky; top: 0; z-index: 5; display: flex; align-items: center; flex-wrap: wrap; gap: 12px 30px; padding: 25px 0 20px; border-bottom: 1px solid var(--line); background: #fff; font-family: var(--ui-font); font-size: 13px; font-weight: 600; letter-spacing: .015em; }
 nav.top a { color: var(--link); white-space: nowrap; }
 nav.top a[aria-current="location"] { color: var(--navy); text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 7px; }
-.hero { display: grid; grid-template-columns: minmax(0, 1fr) var(--portrait-width); gap: 28px 36px; align-items: start; padding: 29px 0 6px; }
-.hero-copy { min-width: 0; }
-.hero h1 { grid-column: 1 / -1; font-family: var(--body-font); font-size: 46px; font-weight: 650; line-height: 1.2; letter-spacing: -.9px; color: var(--heading); margin: 0; }
+.hero { display: grid; grid-template-columns: var(--portrait-width) minmax(0, 1fr); grid-template-areas: "portrait title" "portrait bio"; gap: 20px 42px; align-items: start; padding: 37px 0 6px; }
+.hero-copy { grid-area: bio; min-width: 0; }
+.hero h1 { grid-area: title; font-family: var(--display-font); font-size: 38px; font-weight: 700; line-height: 1.3; letter-spacing: -.85px; color: var(--heading); margin: 0; }
 .hero p { margin: 0 0 17px; }
 .hero-copy > p { font-size: 18px; line-height: 1.65; }
-.hero-copy .hero-goal { border-left: 3px solid var(--accent); background: #f3f8fa; padding: 11px 15px; color: var(--heading); margin: 22px 0 20px; }
-.profile-side { padding: 5px 0 0; }
+.hero-copy .hero-goal { color: var(--heading); margin: 0 0 20px; }
+.profile-side { grid-area: portrait; width: var(--portrait-width); padding: 4px 0 0; }
 .photo, .portrait-space { width: var(--portrait-width); overflow: hidden; }
 .portrait-space { aspect-ratio: 3 / 4; }
 .photo img { display: block; width: 100%; height: auto; }
@@ -57,6 +57,7 @@ nav.top a[aria-current="location"] { color: var(--navy); text-decoration: underl
 .current-affiliation a { display: block; font-size: 17px; line-height: 1.35; font-weight: 600; }
 .current-affiliation span { display: block; font-size: 14px; line-height: 1.5; color: var(--muted); margin-top: 4px; }
 .social { display: flex; align-items: center; gap: 19px; margin: 19px 0 5px; }
+.profile-side .social { justify-content: space-between; gap: 10px; margin: 18px 0 0; }
 .social a { display: inline-flex; width: 29px; height: 32px; align-items: center; justify-content: center; color: var(--navy); }
 .social svg { display: block; width: 27px; height: 27px; fill: currentColor; }
 .social .social-stanford-mark { display: block; width: 22px; height: 30px; object-fit: contain; }
@@ -73,7 +74,7 @@ nav.top a[aria-current="location"] { color: var(--navy); text-decoration: underl
 section { padding: 36px 0 4px; scroll-margin-top: 90px; }
 #news { padding-top: 28px; }
 .section-body { margin-inline: var(--section-inset); }
-h2.sec { font-family: var(--body-font); font-size: 30px; font-weight: 650; letter-spacing: -.35px; line-height: 1.4; color: var(--heading); margin: 0 0 12px; }
+h2.sec { font-family: var(--display-font); font-size: 29px; font-weight: 700; letter-spacing: -.6px; line-height: 1.4; color: var(--heading); margin: 0 0 12px; }
 h2.sec + hr { height: 2px; border: 0; background: linear-gradient(to right, var(--accent) 0 42px, var(--line) 42px 100%); margin: 0 0 23px; }
 h3.subsec { font-size: 23px; font-weight: 600; margin: 26px 0 9px; line-height: 1.4; }
 h3.subsec:first-of-type { margin-top: 0; }
@@ -97,7 +98,7 @@ ul.news li { display: grid; grid-template-columns: 86px minmax(0, 1fr); align-it
 .filters { display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0 17px; }
 .chip { border: 1px solid transparent; border-radius: 5px; padding: 6px 12px; background: transparent; color: var(--link); font-family: var(--ui-font); font-size: 13px; font-weight: 600; line-height: 1.6; cursor: pointer; transition: background-color .15s, color .15s; }
 .chip:hover { background: var(--soft); }
-.chip[aria-pressed="true"] { color: var(--navy); background: var(--soft); border-color: #c8dfe7; box-shadow: inset 0 -2px var(--accent); }
+.chip[aria-pressed="true"] { color: #fff; background: var(--navy); border-color: var(--navy); }
 .publication-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 23px 0 4px; padding-bottom: 11px; border-bottom: 1px solid var(--line); }
 .publication-toolbar .filters { margin: 0; }
 .motion-toggle-all { display: inline-flex; align-items: center; gap: 5px; border: 0; background: transparent; color: var(--muted); font-size: 13px; padding: 7px 0 7px 8px; white-space: nowrap; cursor: pointer; }
@@ -218,8 +219,8 @@ footer { display: flex; justify-content: space-between; gap: 12px; border-top: 1
   :root { --paper-figure-width: 270px; --section-inset: 16px; --portrait-width: 180px; }
   .wrap { padding: 0 30px; }
   nav.top { gap: 10px 23px; font-size: 12px; }
-  .hero { grid-template-columns: minmax(0, 1fr) var(--portrait-width); gap: 28px; }
-  .hero h1 { font-size: 42px; }
+  .hero { grid-template-columns: var(--portrait-width) minmax(0, 1fr); gap: 19px 28px; }
+  .hero h1 { font-size: 34px; }
   .hero-copy > p { font-size: 18px; }
   .current-affiliation { gap: 10px; }
   .current-affiliation a { font-size: 16px; }
@@ -238,10 +239,13 @@ footer { display: flex; justify-content: space-between; gap: 12px; border-top: 1
   body { font-size: 18px; }
   .wrap { padding: 0 23px; }
   nav.top { padding: 19px 0 15px; gap: 11px 19px; font-size: 11px; letter-spacing: .015em; }
-  .hero { grid-template-columns: 1fr; gap: 22px; padding: 30px 0 10px; }
-  .hero h1 { font-size: clamp(34px, 9vw, 42px); letter-spacing: -.7px; margin: 0; }
+  .hero { grid-template-columns: 1fr; grid-template-areas: "title" "portrait" "bio"; gap: 22px; padding: 30px 0 10px; }
+  .hero h1 { font-size: clamp(29px, 8.2vw, 36px); letter-spacing: -.7px; margin: 0; text-align: center; }
   .hero-copy > p { font-size: 18px; line-height: 1.65; }
-  .profile-side { padding: 0; }
+  .profile-side { width: 158px; padding: 0; }
+  .profile-side .social { gap: 6px; margin-top: 15px; }
+  .profile-side .social a { width: 25px; height: 30px; }
+  .profile-side .social svg { width: 24px; height: 24px; }
   .profile-side.awaiting-photo { display: none; }
   .profile-side:not(.awaiting-photo) { grid-row: 2; justify-self: center; }
   .current-affiliations { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
@@ -322,18 +326,17 @@ footer { display: flex; justify-content: space-between; gap: 12px; border-top: 1
   <div class="hero-copy">
     <p>I am a Visiting Researcher at <a href="https://www.stanford.edu/">Stanford University</a>, working with <a href="https://profiles.stanford.edu/joseph-wu">Joseph C. Wu</a> and <a href="https://profiles.stanford.edu/xuekun-wu">Xuekun Wu</a> on <b>agentic AI for life sciences</b>, and a student researcher at <a href="https://deepmind.google/">Google DeepMind</a>, working with <a href="https://scholar.google.com/citations?user=p9-ohHsAAAAJ">Ming-Hsuan Yang</a> and <a href="https://scholar.google.com/citations?user=1H9CkZgAAAAJ">Liangzhe Yuan</a> on <b>efficient video and vision-language models</b>. Previously, I was a research intern at <a href="https://www.ntu.edu.sg/">Nanyang Technological University</a> (with <a href="https://scholar.google.com/citations?user=NDMIYKsAAAAJ">Kwok-Yan Lam</a> and <a href="https://scholar.google.com/citations?user=JDN-eaYAAAAJ">Yongsen Zheng</a>), <a href="https://ai.meta.com/">Meta AI</a> (<a href="https://ai.meta.com/blog/llama-4-multimodal-intelligence/">Llama 4</a> team), and <a href="https://research.snap.com/">Snap Research</a> (with <a href="https://jianwang-cmu.github.io/">Jian Wang</a>), and a researcher at the HCP Lab of <a href="https://www.sysu.edu.cn/">Sun Yat-sen University</a> (with <a href="https://scholar.google.com/citations?user=Qirk2fYAAAAJ">Keze Wang</a> and <a href="https://scholar.google.com/citations?user=Nav8m8gAAAAJ">Liang Lin</a>).</p>
     <p class="hero-goal">My goal is to help build the next generation of <b>AI agents for scientific discovery</b>.</p>
-    <div class="social" aria-label="Personal links"><a href="mailto:jusheng@stanford.edu" aria-label="Email" title="Email"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg></a>
-<a href="https://scholar.google.com/citations?user=-EvMmxoAAAAJ" aria-label="Google Scholar" title="Google Scholar"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M390.9 298.5c0 0 0 .1 .1 .1c9.2 19.4 14.4 41.1 14.4 64C405.3 445.1 338.5 512 256 512s-149.3-66.9-149.3-149.3c0-22.9 5.2-44.6 14.4-64h0c1.7-3.6 3.6-7.2 5.6-10.7c4.4-7.6 9.4-14.7 15-21.3c27.4-32.6 68.5-53.3 114.4-53.3c33.6 0 64.6 11.1 89.6 29.9c9.1 6.9 17.4 14.7 24.8 23.5c5.6 6.6 10.6 13.8 15 21.3c2 3.4 3.8 7 5.5 10.5zm26.4-18.8c-30.1-58.4-91-98.4-161.3-98.4s-131.2 40-161.3 98.4L0 202.7 256 0 512 202.7l-94.7 77.1z"/></svg></a>
-<a href="https://github.com/jushengzhang" aria-label="GitHub" title="GitHub"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></a>
-<a href="https://www.linkedin.com/in/%E5%B7%A8%E5%A3%B0-%E5%BC%A0-50510b1b8/" aria-label="LinkedIn" title="LinkedIn"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
-<a href="https://profiles.stanford.edu/jusheng-zhang?releaseVersion=11.5.3" aria-label="Stanford Profile" title="Stanford Profile"><img class="social-stanford-mark" src="assets/logo-stanford.png" alt="" aria-hidden="true" width="22" height="30"></a></div>
     <div class="hero-contact">
       <p class="hero-mail-row"><span>Email:</span> <em><a class="stanford-email" href="mailto:jusheng@stanford.edu" aria-label="Email Jusheng Zhang at jusheng@stanford.edu"><img class="stanford-email-mark" src="assets/logo-stanford.png" alt="" aria-hidden="true" width="18" height="27"><span>jusheng [at] stanford [dot] edu</span></a></em></p>
       <p>Address: <em>Stanford, CA, USA</em></p>
       <p>Last update time: <em>2026.11</em></p>
     </div>
   </div>
-  <aside class="profile-side"><div class="photo"><img src="assets/photo.jpg" alt="Portrait of Jusheng Zhang" width="1079" height="1458"></div></aside>
+  <aside class="profile-side"><div class="photo"><img src="assets/photo.jpg" alt="Portrait of Jusheng Zhang" width="1079" height="1458"></div><div class="social" aria-label="Personal links"><a href="mailto:jusheng@stanford.edu" aria-label="Email" title="Email"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg></a>
+<a href="https://scholar.google.com/citations?user=-EvMmxoAAAAJ" aria-label="Google Scholar" title="Google Scholar"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M390.9 298.5c0 0 0 .1 .1 .1c9.2 19.4 14.4 41.1 14.4 64C405.3 445.1 338.5 512 256 512s-149.3-66.9-149.3-149.3c0-22.9 5.2-44.6 14.4-64h0c1.7-3.6 3.6-7.2 5.6-10.7c4.4-7.6 9.4-14.7 15-21.3c27.4-32.6 68.5-53.3 114.4-53.3c33.6 0 64.6 11.1 89.6 29.9c9.1 6.9 17.4 14.7 24.8 23.5c5.6 6.6 10.6 13.8 15 21.3c2 3.4 3.8 7 5.5 10.5zm26.4-18.8c-30.1-58.4-91-98.4-161.3-98.4s-131.2 40-161.3 98.4L0 202.7 256 0 512 202.7l-94.7 77.1z"/></svg></a>
+<a href="https://github.com/jushengzhang" aria-label="GitHub" title="GitHub"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></a>
+<a href="https://www.linkedin.com/in/%E5%B7%A8%E5%A3%B0-%E5%BC%A0-50510b1b8/" aria-label="LinkedIn" title="LinkedIn"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
+<a href="https://profiles.stanford.edu/jusheng-zhang?releaseVersion=11.5.3" aria-label="Stanford Profile" title="Stanford Profile"><img class="social-stanford-mark" src="assets/logo-stanford.png" alt="" aria-hidden="true" width="22" height="30"></a></div></aside>
 </header>
 
 <main id="content">

@@ -207,6 +207,61 @@ body{font:400 16px/1.55 var(--body);color:var(--ink)}.shell{width:min(1068px,cal
 /* Put the substance of the research back on the landing page. */
 .home-research { padding-top: 23px; }
 .research-topics > span { color: #88728f; font-size: 13px; }
+
+/* Contact uses the same small blue icon treatment as the profile links. */
+#contact .contact-address {
+  color: var(--ink);
+  font-size: 16px;
+  font-style: normal;
+  line-height: 1.75;
+}
+#contact .contact-institution { font-weight: 500; }
+#contact .contact-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  color: var(--blue);
+  line-height: 1.5;
+}
+#contact .stanford-email-mark {
+  display: block;
+  flex: 0 0 16px;
+  width: 16px;
+  height: 24px;
+  object-fit: contain;
+}
+#contact .contact-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px 24px;
+  margin-top: 18px;
+}
+#contact .contact-social {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--blue);
+  font-size: 15px;
+  font-style: normal;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+#contact .contact-social svg {
+  display: block;
+  flex: 0 0 18px;
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+#contact .social-stanford-mark {
+  display: block;
+  flex: 0 0 16px;
+  width: 16px;
+  height: 22px;
+  object-fit: contain;
+}
 .research-recognition {
   display: grid;
   grid-template-columns: 1fr 1.15fr 1.2fr;

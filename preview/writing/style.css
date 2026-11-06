@@ -330,6 +330,15 @@ body{font:400 16px/1.55 var(--body);color:var(--ink)}.shell{width:min(1068px,cal
 .home-challenges hr { display: none; }
 .home-challenges .challenge-title { font-size: 20px; }
 .home-challenges .challenge-role { font-size: 14px; }
+.challenge-authors {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.65;
+  margin: 8px 0 10px;
+}
+.challenge-authors b { color: var(--ink); }
+.challenge-author-label { color: #796886; font-size: 12px; font-weight: 600; }
+.home-challenges .challenge-authors { font-size: 13.5px; }
 .home-challenges .challenge-description { font-size: 14px; }
 .home-challenges .challenge-links { font-size: 13px; }
 .home-honors hr { display: none; }

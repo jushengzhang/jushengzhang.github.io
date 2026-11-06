@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jushengzhang.github.io/sitemap.xml

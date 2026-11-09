@@ -52,8 +52,9 @@ body{font:400 16px/1.55 var(--body);color:var(--ink)}.shell{width:min(1068px,cal
   border-radius: 8px;
   box-shadow: 0 6px 22px #693a8c12;
 }
-.profile-social { width: 230px; margin: 17px 0 20px; }
-.profile-social a { color: #5c64a1; }
+.profile-social { width: 230px; margin: 17px 0 20px; gap: 12px; }
+.profile-social a { color: #5c64a1; flex-shrink: 0; }
+.profile-social .profile-stanford-mark { display: block; width: 18px; height: 23px; object-fit: contain; }
 .profile-social a:hover { color: var(--teal); }
 .profile-copy h1 { font-size: 44px; margin-bottom: 20px; }
 .profile-copy p { font-size: 18px; line-height: 1.62; margin-bottom: 14px; }
@@ -173,7 +174,8 @@ body{font:400 16px/1.55 var(--body);color:var(--ink)}.shell{width:min(1068px,cal
   .profile { grid-template-columns: 1fr; gap: 23px; padding-top: 26px; padding-bottom: 12px; }
   .profile-sidebar { grid-template-columns: 124px minmax(0, 1fr); gap: 15px 22px; }
   .profile-photo-frame { width: 124px; height: 142px; }
-  .profile-social { width: auto; margin: 3px 0 0; }
+  .profile-social { width: auto; margin: 3px 0 0; gap: 6px; }
+  .profile-social .profile-stanford-mark { width: 16px; height: 21px; }
   .profile-copy h1 { font-size: 34px; margin-bottom: 17px; }
   .profile-copy p { font-size: 17px; line-height: 1.62; margin-bottom: 14px; }
   .research-topics { margin-top: 16px; font-size: 13px; gap: 7px 18px; }

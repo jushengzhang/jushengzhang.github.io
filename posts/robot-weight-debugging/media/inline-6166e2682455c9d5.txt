@@ -1,0 +1,216 @@
+@article{rt2,
+  title = {{RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control}},
+  author = {Brohan, Anthony and Brown, Noah and Carbajal, Justice and Chebotar, Yevgen and Chen, Xi and Choromanski, Krzysztof and Ding, Tianli and Driess, Danny and Dubey, Avinava and Finn, Chelsea and Florence, Pete and Fu, Chuyuan and Arenas, Montse Gonzalez and Gopalakrishnan, Keerthana and Han, Kehang and Hausman, Karol and Herzog, Alexander and Hsu, Jasmine and Ichter, Brian and Irpan, Alex and Joshi, Nikhil and Julian, Ryan and Kalashnikov, Dmitry and Kuang, Yuheng and Leal, Isabel and Lee, Lisa and Lee, Tsang-Wei Edward and Levine, Sergey and Lu, Yao and Michalewski, Henryk and Mordatch, Igor and Pertsch, Karl and Rao, Kanishka and Reymann, Krista and Ryoo, Michael and Salazar, Grecia and Sanketi, Pannag and Sermanet, Pierre and Singh, Jaspiar and Singh, Anikait and Soricut, Radu and Tran, Huong and Vanhoucke, Vincent and Vuong, Quan and Wahid, Ayzaan and Welker, Stefan and Wohlhart, Paul and Wu, Jialin and Xia, Fei and Xiao, Ted and Xu, Peng and Xu, Sichun and Yu, Tianhe and Zitkovich, Brianna},
+  journal = {arXiv preprint arXiv:2307.15818},
+  year = {2023},
+  url = {https://arxiv.org/abs/2307.15818}
+}
+
+@article{openvla,
+  title = {{OpenVLA: An Open-Source Vision-Language-Action Model}},
+  author = {Kim, Moo Jin and Pertsch, Karl and Karamcheti, Siddharth and Xiao, Ted and Balakrishna, Ashwin and Nair, Suraj and Rafailov, Rafael and Foster, Ethan and Lam, Grace and Sanketi, Pannag and Vuong, Quan and Kollar, Thomas and Burchfiel, Benjamin and Tedrake, Russ and Sadigh, Dorsa and Levine, Sergey and Liang, Percy and Finn, Chelsea},
+  journal = {arXiv preprint arXiv:2406.09246},
+  year = {2024},
+  url = {https://arxiv.org/abs/2406.09246}
+}
+
+@article{diffusionpolicy,
+  title = {{Diffusion Policy: Visuomotor Policy Learning via Action Diffusion}},
+  author = {Chi, Cheng and Xu, Zhenjia and Feng, Siyuan and Cousineau, Eric and Du, Yilun and Burchfiel, Benjamin and Tedrake, Russ and Song, Shuran},
+  journal = {arXiv preprint arXiv:2303.04137},
+  year = {2023},
+  url = {https://arxiv.org/abs/2303.04137}
+}
+
+@article{fastwam,
+  title = {{Fast-WAM: Do World Action Models Need Test-time Future Imagination?}},
+  author = {Yuan, Tianyuan and Dong, Zibin and Liu, Yicheng and Zhao, Hang},
+  journal = {arXiv preprint arXiv:2603.16666},
+  year = {2026},
+  url = {https://arxiv.org/abs/2603.16666}
+}
+
+@article{libero,
+  title = {{LIBERO: Benchmarking Knowledge Transfer for Lifelong Robot Learning}},
+  author = {Liu, Bo and Zhu, Yifeng and Gao, Chongkai and Feng, Yihao and Liu, Qiang and Zhu, Yuke and Stone, Peter},
+  journal = {arXiv preprint arXiv:2306.03310},
+  year = {2023},
+  url = {https://arxiv.org/abs/2306.03310}
+}
+
+@article{liberoplus,
+  title = {{LIBERO-Plus: In-depth Robustness Analysis of Vision-Language-Action Models}},
+  author = {Fei, Senyu and Wang, Siyin and Shi, Junhao and Dai, Zihao and Cai, Jikun and Qian, Pengfang and Ji, Li and He, Xinzhe and Zhang, Shiduo and Fei, Zhaoye and Fu, Jinlan and Gong, Jingjing and Qiu, Xipeng},
+  journal = {arXiv preprint arXiv:2510.13626},
+  year = {2025},
+  url = {https://arxiv.org/abs/2510.13626}
+}
+
+@article{rome,
+  title = {{Locating and Editing Factual Associations in GPT}},
+  author = {Meng, Kevin and Bau, David and Andonian, Alex and Belinkov, Yonatan},
+  journal = {arXiv preprint arXiv:2202.05262},
+  year = {2022},
+  url = {https://arxiv.org/abs/2202.05262}
+}
+
+@article{memit,
+  title = {{Mass-Editing Memory in a Transformer}},
+  author = {Meng, Kevin and Sharma, Arnab Sen and Andonian, Alex and Belinkov, Yonatan and Bau, David},
+  journal = {arXiv preprint arXiv:2210.07229},
+  year = {2022},
+  url = {https://arxiv.org/abs/2210.07229}
+}
+
+@article{mend,
+  title = {{Fast Model Editing at Scale}},
+  author = {Mitchell, Eric and Lin, Charles and Bosselut, Antoine and Finn, Chelsea and Manning, Christopher D.},
+  journal = {arXiv preprint arXiv:2110.11309},
+  year = {2021},
+  url = {https://arxiv.org/abs/2110.11309}
+}
+
+@article{leace,
+  title = {{LEACE: Perfect linear concept erasure in closed form}},
+  author = {Belrose, Nora and Schneider-Joseph, David and Ravfogel, Shauli and Cotterell, Ryan and Raff, Edward and Biderman, Stella},
+  journal = {arXiv preprint arXiv:2306.03819},
+  year = {2023},
+  url = {https://arxiv.org/abs/2306.03819}
+}
+
+@article{iti,
+  title = {{Inference-Time Intervention: Eliciting Truthful Answers from a Language Model}},
+  author = {Li, Kenneth and Patel, Oam and Viégas, Fernanda and Pfister, Hanspeter and Wattenberg, Martin},
+  journal = {arXiv preprint arXiv:2306.03341},
+  year = {2023},
+  url = {https://arxiv.org/abs/2306.03341}
+}
+
+@article{flowmatching,
+  title = {{Flow Matching for Generative Modeling}},
+  author = {Lipman, Yaron and Chen, Ricky T. Q. and Ben-Hamu, Heli and Nickel, Maximilian and Le, Matt},
+  journal = {arXiv preprint arXiv:2210.02747},
+  year = {2022},
+  url = {https://arxiv.org/abs/2210.02747}
+}
+
+@inproceedings{rss,
+    title = "Stable Language Guidance for Vision{--}Language{--}Action Models",
+    author = "Zhan, Zhihao  and
+      Chen, Yuhao  and
+      Zhou, Jiaying  and
+      Lyu, Qinhan  and
+      Liu, Hao  and
+      Wang, Keze  and
+      Lin, Liang  and
+      Wang, Guangrun",
+    editor = "Liakata, Maria  and
+      Moreira, Viviane P.  and
+      Zhang, Jiajun  and
+      Jurgens, David",
+    booktitle = "Proceedings of the 64th Annual Meeting of the {A}ssociation for {C}omputational {L}inguistics (Volume 1: Long Papers)",
+    month = jul,
+    year = "2026",
+    address = "San Diego, California, United States",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2026.acl-long.190/",
+    doi = "10.18653/v1/2026.acl-long.190",
+    pages = "4137--4159",
+    ISBN = "979-8-89176-390-6"
+}
+
+@misc{wsp,
+  title = {{Sparks of Weight-Space Programming: LLMs can natively read and write neural network weights}},
+  author = {Rikiya Takehi and Jayden Teoh and Alex Zhang and Omar Khattab},
+  year = {2026},
+  month = nov,
+  howpublished = {Research blog and released experiment logs},
+  url = {https://rikiyat.github.io/blog/weight-space-programming/}
+}
+
+@article{mcnemar,
+  title = {Note on the sampling error of the difference between correlated proportions or percentages},
+  author = {Quinn McNemar},
+  journal = {Psychometrika},
+  volume = {12},
+  pages = {153--157},
+  year = {1947},
+  doi = {10.1007/BF02295996},
+  url = {https://doi.org/10.1007/BF02295996}
+}
+
+@techreport{grootn1,
+  title = {{GR00T N1: An Open Foundation Model for Generalist Humanoid Robots}},
+  author = {{NVIDIA}},
+  institution = {NVIDIA},
+  year = {2025},
+  url = {https://d1qx31qr3h6wln.cloudfront.net/publications/GR00T_1_Whitepaper.pdf}
+}
+
+
+@article{pi05,
+ title={{$\pi_{0.5}$: a Vision-Language-Action Model with Open-World Generalization}},
+ author={{Physical Intelligence} and Kevin Black and Noah Brown and James Darpinian and others},
+ journal={arXiv preprint arXiv:2504.16054}, year={2025}, url={https://arxiv.org/abs/2504.16054}
+}
+@article{liberopro,
+ title={{LIBERO-PRO: Towards Robust and Fair Evaluation of Vision-Language-Action Models Beyond Memorization}},
+ author={Xueyang Zhou and Yangming Xu and Guiyao Tie and Yongchao Chen and Guowen Zhang and Duanfeng Chu and Pan Zhou and Lichao Sun},
+ journal={arXiv preprint arXiv:2510.03827}, year={2025}, url={https://arxiv.org/abs/2510.03827}
+}
+@article{liberorecover,
+ title={{LIBERO-RECOVER: Beyond Task Success Towards Failure Recovery in Robotic Manipulation Models}},
+ author={Lin Liu and Zhicheng Bao and Lu Zhang and Ziying Song and Wu Yang and Yuzheng Zhuang and Shuai Tao and Wulong Liu and Caiyan Jia and Huchuan Lu},
+ journal={arXiv preprint arXiv:2609.05178}, year={2026}, url={https://arxiv.org/abs/2609.05178}
+}
+
+@IEEEtranBSTCTL{bstcontrol,
+  CTLuse_forced_etal = {yes},
+  CTLuse_url = {no},
+  CTLmax_names_forced_etal = {6},
+  CTLnames_show_etal = {3}
+}
+
+@article{dreamzero,
+ author={Ye, Seonghyeon and Ge, Yunhao and Zheng, Kaiyuan and others},
+ title={World Action Models are Zero-shot Policies},
+ journal={arXiv preprint arXiv:2602.15922}, year={2026},
+ url={https://arxiv.org/abs/2602.15922}
+}
+
+
+@article{e05,
+ title={{E0.5: From Reconstructive to Future-Predictive 3D Foundations for Robotic World-Action Modeling}},
+ author={{X-Era AI Lab Team} and Jianhao Lai and Zhihao Zhan and Zhiquan Liao and others},
+ journal={arXiv preprint arXiv:2610.36011}, year={2026}, url={https://arxiv.org/abs/2610.36011}
+}
+@article{pi0,
+ title={{$\pi_0$: A Vision-Language-Action Flow Model for General Robot Control}},
+ author={Kevin Black and Noah Brown and Danny Driess and others},
+ journal={arXiv preprint arXiv:2410.24164}, year={2024}, url={https://arxiv.org/abs/2410.24164}
+}
+@article{octo,
+ title={{Octo: An Open-Source Generalist Robot Policy}},
+ author={{Octo Model Team} and Dibya Ghosh and Homer Walke and Karl Pertsch and others},
+ journal={arXiv preprint arXiv:2405.12213}, year={2024}, url={https://arxiv.org/abs/2405.12213}
+}
+@article{lora,
+ title={{LoRA: Low-Rank Adaptation of Large Language Models}},
+ author={Edward J. Hu and Yelong Shen and Phillip Wallis and Zeyuan Allen-Zhu and Yuanzhi Li and Shean Wang and Lu Wang and Weizhu Chen},
+ journal={arXiv preprint arXiv:2106.09685}, year={2021}, url={https://arxiv.org/abs/2106.09685}
+}
+@article{paligemma,
+ title={{PaliGemma: A versatile 3B VLM for transfer}},
+ author={Lucas Beyer and Andreas Steiner and Andr{\'e} Susano Pinto and others},
+ journal={arXiv preprint arXiv:2407.07726}, year={2024}, url={https://arxiv.org/abs/2407.07726}
+}
+@article{siglip,
+ title={{Sigmoid Loss for Language Image Pre-Training}},
+ author={Xiaohua Zhai and Basil Mustafa and Alexander Kolesnikov and Lucas Beyer},
+ journal={arXiv preprint arXiv:2303.15343}, year={2023}, url={https://arxiv.org/abs/2303.15343}
+}
+@article{lexicalalignment,
+ title={{Exploiting Similarities among Languages for Machine Translation}},
+ author={Tomas Mikolov and Quoc V. Le and Ilya Sutskever},
+ journal={arXiv preprint arXiv:1309.4168}, year={2013}, url={https://arxiv.org/abs/1309.4168}
+}

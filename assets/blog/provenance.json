@@ -1,0 +1,31 @@
+{
+  "article": "https://jushengzhang.github.io/posts/robot-weight-debugging/",
+  "code": "https://github.com/jushengzhang/robot-weight-debugging",
+  "paper": "https://arxiv.org/abs/2611.09376",
+  "episode": "libero_goal / variant 1421 / seed 7 / initial state 0",
+  "instruction": "activate the cooking appliances heat source",
+  "source_files": {
+    "libero_goal_v1421_s7_i0_orig_fail.mp4": {
+      "sha256": "65863af1bdddae4c93c075ccfc9d79b19e4997b072f36126d69e140fd13a5021"
+    },
+    "libero_goal_v1421_s7_i0_edit_succ.mp4": {
+      "sha256": "95c6713f5a0c5bcebf7c8bf6fcaadaf6e74b3a7609d31952f9fddbac74abea0f"
+    }
+  },
+  "composition": "External camera (left half) of each two-camera source, original on left, edited on right. Original playback rate. Edited rollout ends at 3.9s and holds its last saved frame while the original continues to 15s. No synthesized frames or outcomes.",
+  "outcomes": {
+    "original": "Timeout at 300 simulator steps",
+    "edited": "Success at step 78"
+  },
+  "scope": "Selected held-out simulator episode; not a real-robot experiment or an aggregate success guarantee.",
+  "outputs": {
+    "robot-weight-debugging-preview.mp4": {
+      "sha256": "1551e5a3265b106d816706d2db2a826b5066e33245d3553f6393fa8da18fdd72",
+      "bytes": 120686
+    },
+    "robot-weight-debugging-poster.jpg": {
+      "sha256": "df5f1fb868fb66d96a941e8b21a568bb810f8d9a9658f010484ee897b5f1e4ab",
+      "bytes": 22163
+    }
+  }
+}

@@ -209,6 +209,15 @@ body{font:400 16px/1.55 var(--body);color:var(--ink)}.shell{width:min(1068px,cal
 .home-research { padding-top: 23px; }
 .research-topics > span { color: #88728f; font-size: 13px; }
 
+/* Keep the profile mark small and aligned with the footer text links. */
+.footer-right .footer-links { display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: 16px; min-height: 22px; }
+.footer-right .footer-links a { margin: 0; }
+.footer-stanford { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; }
+.footer-stanford img { display: block; width: 16px; height: 20px; object-fit: contain; }
+@media (max-width: 640px) {
+  .footer-right .footer-links { justify-content: flex-start; }
+}
+
 /* Contact uses the same small blue icon treatment as the profile links. */
 #contact .contact-address {
   color: var(--ink);
